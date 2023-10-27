@@ -1,0 +1,5 @@
+DETALLES IMPORTANTES:
+
+1. para salir de los videos cliquea la tecla "esc".
+2. evita cliquear mas de dos veces, se paciente abrira en segundos.
+3. Si lleva gafas, debe de retirarselas para no interferir con el modelo(al menos mientras esta recolectando los datos)

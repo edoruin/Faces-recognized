@@ -1,5 +1,3 @@
-DESARROLLADO EN EL HOGAR DEL NIÑO, MAKERSPACE.
-
 
 
 Face Recognize!!!!!!, ¡¿reconocimiento de rostros, pueden creerlo?! ¡¡ENCIMA HECHO UNA APLICACIÓN!!

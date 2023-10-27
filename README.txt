@@ -26,7 +26,7 @@ esto es un EXTRA.
 
 I from of Dominican Republic, La romana, i have 18 years old, i´m interest in 
 topics how the machine learning, artificial inteligence, data sciences u know,
-Tecnology...use the younger energy!. is time, pruebe the app, this a EXTRA.
+Tecnology...using the younger energy!. is time, pruebe the app, this a EXTRA.
 
 
 so sorry mi english level is in more or less a intermediate level, is probable that be

@@ -35,3 +35,9 @@ this...
 
 
 
+HOW TO USE:
+
+el programa tiene tres documentos importantes, codigo de recolección, entrenamiento y el codigo de reconocimiento(recolectardataGrayscale.py, entrenandorf.py, reconocimientograyscale.py). se ejecutan los tres codigos en el orden anterior..con ayuda del video tutorial.mp4 ya se tendria una idea de como utilizarlo.
+
+this program have three especial documents, recolection, training and the recognized code(recolectardatagrayscale.py, entrenandorf.py,reconocimientograyscale.py) the codes run in the previously order mentioned...with help of the one tutorial.mp4 file, u have a idea of how to use.
+

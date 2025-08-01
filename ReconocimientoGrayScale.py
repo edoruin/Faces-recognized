@@ -2,7 +2,7 @@ import cv2
 import os 
 
 
-dataPath = "C:/Users/Jaime Farrel/Desktop/edwin/makerspace/proyects/reconocimiento facial/data"
+dataPath = "ruta_data"
 
 imagePaths = os.listdir(dataPath)   
 # print('imagePaths=', imagePaths)

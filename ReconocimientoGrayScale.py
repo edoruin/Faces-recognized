@@ -2,7 +2,7 @@ import cv2
 import os 
 
 
-dataPath = "ruta_data"
+dataPath = r"data"
 
 imagePaths = os.listdir(dataPath)   
 # print('imagePaths=', imagePaths)
@@ -10,13 +10,8 @@ imagePaths = os.listdir(dataPath)
 face_recognizer = cv2.face.LBPHFaceRecognizer_create() 
 
 #LECTURA DEL VIDEO 
-face_recognizer.read('ruta_modelo.xml')
+face_recognizer.read('LBPH/modeloLBPHFace_.xml')
 cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-
-
-
-
-
 
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')

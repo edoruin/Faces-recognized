@@ -4,7 +4,7 @@ import numpy as np
 
 #escoges la carpeta, la conviertes en una lista y la muestras en la terminal
 
-dataPath = "C:/Users/Jaime Farrel/Desktop/edwin/makerspace/proyects/reconocimiento facial/data"
+dataPath = "../data"
 
 peopleList = listdir(dataPath)
 print('Lista de personas: ', peopleList)

@@ -1,4 +1,0 @@
-time
-opencv-contrib-python
-numpy
-imutils

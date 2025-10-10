@@ -7,7 +7,7 @@ from time import sleep as sl
 PersonName = input("Nombre del nuevo registro: ")
 
 
-dataPath = "C:/Users/Jaime Farrel/Desktop/edwin/makerspace/proyects/reconocimiento facial/data"
+dataPath = r"data"
 
 emotionsPath = dataPath + '/' + PersonName
 

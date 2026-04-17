@@ -1,21 +1,19 @@
 import cv2
+import os
 from os import path, makedirs
 from imutils import resize 
 from time import sleep as sl 
 
-
 PersonName = input("Nombre del nuevo registro: ")
 
-
-dataPath = r"data"
-
-emotionsPath = dataPath + '/' + PersonName
+dataPath = "data"
+emotionsPath = os.path.join(dataPath, PersonName)
 
 if not path.exists(emotionsPath):
-    print('carpeta creada: ',emotionsPath)
+    print('carpeta creada: ', emotionsPath)
     makedirs(emotionsPath)
 
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 count = 0 
@@ -32,7 +30,7 @@ while True:
         cv2.rectangle(gray, (x,y),(x+w,y+h),(0,255,0),2)
         rostro = cv2.cvtColor(auxFrame[y:y+h,x:x+w], cv2.COLOR_BGR2GRAY)
         rostro = cv2.resize(rostro, (150,160),interpolation=cv2.INTER_CUBIC)
-        cv2.imwrite(emotionsPath + '/rostro_{}.jpg'.format(count),rostro)
+        cv2.imwrite(os.path.join(emotionsPath, 'rostro_{}.jpg'.format(count)), rostro)
         print('imagen tomada_{}'.format(count))
 
         count = count  + 1

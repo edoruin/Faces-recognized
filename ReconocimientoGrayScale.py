@@ -2,8 +2,9 @@ import cv2
 import os 
 
 
-dataPath = r"data"
-
+dataPath = "data"
+if not os.path.exists(dataPath):
+    os.makedirs(dataPath)
 imagePaths = os.listdir(dataPath)   
 # print('imagePaths=', imagePaths)
 
@@ -11,7 +12,7 @@ face_recognizer = cv2.face.LBPHFaceRecognizer_create()
 
 #LECTURA DEL VIDEO 
 face_recognizer.read('LBPH/modeloLBPHFace_.xml')
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(0)
 
 
 faceClassif = cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml')

@@ -48,5 +48,5 @@ print('preparando el modelo...')
 face_recognizer.train(facesData, np.array(labels))
 
 #save the modelo 
-face_recognizer.write('C:/Users/Jaime Farrel/Desktop/edwin/makerspace/proyects/reconocimiento facial/LBPH/modeloLBPHFace_.xml')
+face_recognizer.write('LBPH/modeloLBPHFace_.xml')
 print('!El modelo ha sido entrenado!')

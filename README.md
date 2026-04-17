@@ -2,6 +2,12 @@
 
 Este proyecto implementa un sistema de reconocimiento facial utilizando Python y la librería OpenCV, específicamente empleando el algoritmo **LBPH (Local Binary Patterns Histograms)**.
 
+## 👤 Sobre el Autor
+**Edwin Agustin**
+Desarrollador originario de La Romana, República Dominicana. Apasionado por el Machine Learning, la Inteligencia Artificial, la Ciencia de Datos y la Tecnología en general.
+
+---
+
 ## 🚀 Funcionamiento
 El sistema se divide en tres etapas principales:
 1. **Recolección de datos**: Captura imágenes del rostro del usuario para crear una base de datos.
@@ -21,6 +27,8 @@ pip install -r requeriments.txt
 ```
 
 ## 📦 Guía de Uso
+
+Para un mejor entendimiento, puedes consultar el archivo `tutorial.mp4` incluido en el repositorio. Los scripts deben ejecutarse en el siguiente orden:
 
 ### 1. Recolección de Rostros
 Ejecuta el script para capturar imágenes de una persona nueva:
@@ -47,5 +55,6 @@ El programa detectará los rostros y mostrará el nombre de la persona si el niv
 - `recolectarGrayScale.py`: Captura de imágenes.
 - `entrenandoRF.py`: Entrenamiento del modelo LBPH.
 - `ReconocimientoGrayScale.py`: Ejecución del reconocimiento facial.
+- `tutorial.mp4`: Video guía para el uso del sistema.
 - `LBPH/`: Carpeta donde se almacena el modelo entrenado.
 - `data/`: Carpeta donde se guardan las imágenes de los rostros recolectados.

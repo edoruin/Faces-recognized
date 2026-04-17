@@ -1,27 +1,51 @@
-# Sistema de Reconocimiento Facial
+# Sistema de Reconocimiento Facial con OpenCV
 
-Este proyecto es una herramienta de reconocimiento facial implementada originalmente en Python utilizando OpenCV y LBPH, y ahora adaptada para funcionar directamente en el navegador mediante **face-api.js**.
+Este proyecto implementa un sistema de reconocimiento facial utilizando Python y la librería OpenCV, específicamente empleando el algoritmo **LBPH (Local Binary Patterns Histograms)**.
 
-## 🚀 Características
-- **Detección Facial en Tiempo Real**: Utiliza la cámara del dispositivo para detectar rostros.
-- **Implementación Web**: Ejecutable desde cualquier navegador sin necesidad de instalar dependencias de Python.
-- **Despliegue Automático**: Integrado con GitHub Actions para desplegar automáticamente en GitHub Pages.
+## 🚀 Funcionamiento
+El sistema se divide en tres etapas principales:
+1. **Recolección de datos**: Captura imágenes del rostro del usuario para crear una base de datos.
+2. **Entrenamiento**: Procesa las imágenes recolectadas para generar un modelo matemático (`.xml`).
+3. **Reconocimiento**: Utiliza la cámara en tiempo real para identificar rostros basándose en el modelo entrenado.
 
-## 🛠️ Tecnologías Utilizadas
-- **Frontend**: HTML5, CSS3, JavaScript.
-- **Librerías**: [face-api.js](https://github.com/justadudewhohacks/face-api.js/) (basada en TensorFlow.js).
-- **Backend (Original)**: Python, OpenCV, LBPH.
-- **CI/CD**: GitHub Actions.
+## 🛠️ Requisitos
+Asegúrate de tener instalado Python y las siguientes dependencias:
+- `opencv-contrib-python` (Necesario para el módulo de reconocimiento facial LBPH)
+- `opencv-python`
+- `imutils`
+- `numpy`
 
-## 📦 Instalación y Ejecución (Versión Web)
-No es necesario instalar nada. Simplemente accede a la URL de GitHub Pages proporcionada en el repositorio.
+Puedes instalar todas las dependencias ejecutando:
+```bash
+pip install -r requeriments.txt
+```
 
-## 🐍 Ejecución de la Versión Python (Legado)
-Si deseas ejecutar la versión original en tu máquina local:
-1. Instala las dependencias: `pip install -r requeriments.txt`
-2. Recolecta datos: `python recolectarGrayScale.py`
-3. Entrena el modelo: `python entrenandoRF.py`
-4. Ejecuta el reconocimiento: `python ReconocimientoGrayScale.py`
+## 📦 Guía de Uso
 
-## 📄 Licencia
-Este proyecto es de código abierto.
+### 1. Recolección de Rostros
+Ejecuta el script para capturar imágenes de una persona nueva:
+```bash
+python recolectarGrayScale.py
+```
+Sigue las instrucciones en la terminal, ingresa el nombre de la persona y mantente frente a la cámara hasta que se capturen las 50 imágenes requeridas.
+
+### 2. Entrenamiento del Modelo
+Una vez recolectados los datos, entrena el modelo de reconocimiento:
+```bash
+python entrenandoRF.py
+```
+Este script procesará las imágenes de la carpeta `data/` y guardará el modelo entrenado en `LBPH/modeloLBPHFace_.xml`.
+
+### 3. Reconocimiento en Tiempo Real
+Para iniciar el reconocimiento facial mediante la cámara:
+```bash
+python ReconocimientoGrayScale.py
+```
+El programa detectará los rostros y mostrará el nombre de la persona si el nivel de confianza es adecuado. Presiona la tecla `ESC` para salir.
+
+## 📂 Estructura del Proyecto
+- `recolectarGrayScale.py`: Captura de imágenes.
+- `entrenandoRF.py`: Entrenamiento del modelo LBPH.
+- `ReconocimientoGrayScale.py`: Ejecución del reconocimiento facial.
+- `LBPH/`: Carpeta donde se almacena el modelo entrenado.
+- `data/`: Carpeta donde se guardan las imágenes de los rostros recolectados.
